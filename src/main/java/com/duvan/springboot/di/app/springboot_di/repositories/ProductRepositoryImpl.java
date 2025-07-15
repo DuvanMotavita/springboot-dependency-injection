@@ -4,14 +4,17 @@ import java.util.List;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
+// import org.springframework.web.context.annotation.RequestScope;
+// import org.springframework.web.context.annotation.SessionScope;
 
 import java.util.Arrays;
 
 import com.duvan.springboot.di.app.springboot_di.models.Product;
 
 
+// @RequestScope
 @Primary
-@Repository
+@Repository("productList")
 public class ProductRepositoryImpl implements ProductRepository {
     private List<Product> data;
 
