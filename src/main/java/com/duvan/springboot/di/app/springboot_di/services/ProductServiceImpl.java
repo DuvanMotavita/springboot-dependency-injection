@@ -16,7 +16,7 @@ import com.duvan.springboot.di.app.springboot_di.repositories.ProductRepository;
 @Service
 public class ProductServiceImpl implements ProductService {
     
-    private Environment environment;
+    // private Environment environment;
 
     @Value("${config.price.tax}")
     private Double tax;
@@ -24,9 +24,9 @@ public class ProductServiceImpl implements ProductService {
     private ProductRepository repository;
 
 
-    public ProductServiceImpl(@Qualifier("productList") ProductRepository repository, Environment environment) {
+    public ProductServiceImpl( @Qualifier("productJson") ProductRepository repository /*,Environment environment*/) {
         this.repository = repository;
-        this.environment = environment;
+        // this.environment = environment;
     }
 
     @Override
